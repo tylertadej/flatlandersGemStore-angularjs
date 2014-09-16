@@ -1,0 +1,13 @@
+<div ng-show="product.images.length">
+  <img class="img-circle center-block"
+       ng-src="{{product.images[gallery.currentIndex]}}">
+	<ul class="list-inline list-unstyled text-center" style="margin-top: 20px">
+		<li ng-repeat="image in product.images"
+		    ng-click="gallery.setCurrent($index)"
+				style="cursor: pointer">
+				<img class="thumbnail"
+						 style="max-height: 75px"
+						 ng-src="{{image}}">
+		</li>
+	</ul>
+</div>

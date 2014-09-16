@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" ng-app="gemStore">
+	<head>
+		<link rel="stylesheet" href="styles/bootstrap.min.css"/>
+	</head>
+
+	<body ng-controller="StoreController as store">
+		<!--  Store Header  -->
+		<header ng-include=" 'views/header.html' "></header>
+
+		<!--  Products Container  -->
+		<div class="container-fluid">
+			<div class="row">
+				<!--  Product Container  -->
+				<product-tile></product-tile>
+			</div>
+		</div>
+
+		<footer ng-include=" 'views/footer.html' "></footer>
+
+		<script src="scripts/angular.min.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="scripts/products.js"></script>
+		<script src="scripts/app.js"></script>
+	</body>
+</html>
