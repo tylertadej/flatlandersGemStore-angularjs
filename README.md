@@ -34,7 +34,7 @@ $ npm start
 
 # Boom!
 ```
-Assuming that goes well navigate to ```localhost:8000/app/ ``` in your browser and view the app
+Assuming that goes well navigate to ```localhost:8000 ``` in your browser and view the app
 
 
 TODO
