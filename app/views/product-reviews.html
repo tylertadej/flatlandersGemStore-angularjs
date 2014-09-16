@@ -1,0 +1,64 @@
+<blockquote ng-repeat="review in product.reviews">
+	<strong ng-if="review.stars > 0">
+		{{review.stars}} Star<span ng-if="review.stars > 1">s</span>
+	</strong>
+	<span>{{review.body}}</span>
+	<cite class="pull-right">— {{review.author}}</cite>
+</blockquote>
+
+
+<!--	Review Form
+				1. Assign ReviewController to form and give alias 'reviewCtrl'
+				2. Run the function addReview when submit is clicked by user (if form is valid)
+				3. Turn off default HTML validation
+-->
+<form name="reviewForm"
+			ng-controller="ReviewController as reviewCtrl"
+			ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)"
+			novalidate>
+
+	<!--  Live Preview -->
+	<div ng-show="reviewCtrl.review.stars">
+		<hr>
+		<h4>Live Preview</h4>
+		<blockquote class="bg-warning">
+			<strong ng-if="reviewCtrl.review.stars > 0">
+				{{reviewCtrl.review.stars}} Star<span ng-if="reviewCtrl.review.stars > 1">s</span>
+			</strong>
+			{{reviewCtrl.review.body}}
+			<cite class="pull-right clearfix" ng-show="reviewCtrl.review.author">{{"— " + reviewCtrl.review.author}}</cite>
+		</blockquote>
+	</div>
+
+	<!--  Review Form -->
+	<h4>Submit a Review</h4>
+	<fieldset class="form-group">
+		<select ng-model="reviewCtrl.review.stars"
+						class="form-control"
+						ng-options="stars for stars in [5,4,3,2,1]"
+						required>
+			<option value>Rate the Product</option>
+		</select>
+	</fieldset>
+	<fieldset class="form-group">
+		<textarea ng-model="reviewCtrl.review.body"
+							class="form-control"
+							placeholder="Write a short review of the product..."
+							required>
+		</textarea>
+	</fieldset>
+	<fieldset class="form-group">
+		<input ng-model="reviewCtrl.review.author"
+					 class="form-control"
+					 type="email" name="email"
+					 placeholder="hello@codeschool.com"
+					 required>
+	</fieldset>
+	<fieldset class="form-group">
+		<!--Reference form name 'reviewForm' and query built-in $valid property-->
+		<!--TODO Incorporate something like this ng-class="{ textSuccess:$valid }"-->
+		<code>reviewForm validation is {{reviewForm.$valid}}</code>
+		<input type="submit" class="btn btn-primary pull-right" value="Submit Review">
+	</fieldset>
+
+</form>

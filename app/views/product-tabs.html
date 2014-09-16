@@ -1,0 +1,34 @@
+<section>
+
+	<ul class="nav nav-tabs nav-justified" role="tablist">
+		<li ng-class="{ active:tab.isSet(1) }">
+			<a href ng-click="tab.setTab(1)">Description</a>
+		</li>
+		<li ng-class="{ active:tab.isSet(2) }">
+			<a href ng-click="tab.setTab(2)">Specs</a>
+		</li>
+		<li ng-class="{ active:tab.isSet(3) }">
+			<a href ng-click="tab.setTab(3)">Reviews</a>
+		</li>
+	</ul>
+
+	<div class="panel-body">
+		<div ng-show="tab.isSet(1)">
+			<blockquote>
+				{{product.description}}
+			</blockquote>
+		</div>
+		<product-specs ng-show="tab.isSet(2)">
+			<dl class="dl-horizontal">
+				<dt>Shine</dt>  <dd>{{product.shine}}</dd>
+				<dt>Faces</dt>  <dd>{{product.faces}}</dd>
+				<dt>Rarity</dt> <dd>{{product.rarity}}</dd>
+				<dt>Color</dt>  <dd>{{product.color}}</dd>
+			</dl>
+		</product-specs>
+		<product-reviews ng-show="tab.isSet(3)">
+			<!--  Review Tab's Content  -->
+		</product-reviews>
+	</div>
+
+</section>
