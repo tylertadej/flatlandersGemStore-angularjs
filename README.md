@@ -3,14 +3,22 @@ Flatlander's Gem Store
 
 AngularJS web application as seen on [Angular.CodeSchool.com]
 
-###[View Live Demo]
+###[View Live Demo]  on GitHub Pages  
+
+
+**Note: This is not hooked up to a back-end so your reviews will disappear upon page refresh**  
+--------------
 
 > Learn to build an application using Angular.js
 > This FREE course is sponsored by Google
 > This project was made by cloning the [Angular-Seed] project which is a great way to
-> get up and running quickly with AngularJS. After that
+> get up and running quickly with AngularJS. After that I cruised around GitHub picking up bits of code and also replayed the course.
 
   - After completing the course download the repo and build your own features
+  - Replay the course and follow along
+  - Figure out how to make the app more efficient
+  - Add your own content and make a completely different app!
+
 
 Installation
 --------------
@@ -34,10 +42,12 @@ TODO
 ----
 	- Add dates to reviews
 	- Fetch and publish time for new reviews
+	- Improve readme
 
 
 
-**If you are new to Git/Github you might find [this gist] useful**
+**If you are new to Git/Github you might find [this gist] useful**  
+
 **Composed in [Dillinger.io]**
 
 [Angular.CodeSchool.com]:http://angular.codeschool.com
