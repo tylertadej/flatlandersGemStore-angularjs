@@ -51,7 +51,7 @@ TODO
 **Markdown composed with help of http://jbt.github.io/markdown-editor/**
 
 [Angular.CodeSchool.com]:http://angular.codeschool.com
-[View Live Demo]:http://tylertadej.github.io/flatlandersgemstore-angularjs/
+[View Live Demo]:http://tylertadej.github.io/flatlandersGemStore-angularjs/
 [Angular-Seed]:http://github.com/angular/angular-seed
 [this gist]: http://gist.github.com/tylertadej/d3fdc6e8465fb3f9105a
 [slides from the course]:http://courseware.codeschool.com/shaping-up-with-angular-js/Slides/level01-05.pdf
